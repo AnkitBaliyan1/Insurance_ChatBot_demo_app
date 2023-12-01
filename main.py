@@ -18,7 +18,12 @@ def info_page():
 
 def contact_page():
     st.title('Contact Us')
-    st.write('This is the contact us page.')
+    st.subheader('For technical assistance: 9958631596')
+    st.subheader("For domain assistance: xxxxxxxxxxx")
+
+    st.markdown(""" 
+                **Note:** We're here to help you from 10 AM to 11 AM!
+                """, unsafe_allow_html=True)
 
 # Function to verify credentials
 def check_credentials(username, password):
@@ -80,3 +85,8 @@ if 'logged_in' not in st.session_state or not st.session_state['logged_in']:
     login_page()
 else:
     main_app()
+
+
+
+
+
