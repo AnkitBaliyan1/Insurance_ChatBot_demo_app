@@ -14,14 +14,12 @@ users = {
 # Define functions for each page
 def info_page():
     st.title('Info')
-    st.write('This is the info page.')
+    st.write('No information here.')
 
 def contact_page():
     st.title('Contact Us')
     st.subheader('For technical assistance: 9958631596')
     st.subheader("For domain assistance: xxxxxxxxxxx")
-
-
     footer_style = """
             <style>
             .footer {
@@ -44,10 +42,10 @@ def contact_page():
     # Adding the footer
     footer = """
         <div class="footer">
-        <p><strong>Note:</strong> We're here to help you from 10 AM to 6 PM! If you reach out to us outside these hours, don't worry – we'll get back to you as soon as we're back.</p>
+        <p><strong>Note:</strong> We're here to help you from 10 AM to 6 PM!</p>
         </div>
     """
-    #st.markdown(footer, unsafe_allow_html=True)
+    st.markdown(footer, unsafe_allow_html=True)
 
     st.markdown(""" 
                 **Note:** We're here to help you from 10 AM to 11 AM!
