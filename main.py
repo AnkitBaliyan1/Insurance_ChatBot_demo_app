@@ -21,6 +21,26 @@ def contact_page():
     st.subheader('For technical assistance: 9958631596')
     st.subheader("For domain assistance: xxxxxxxxxxx")
 
+
+    footer_style = """
+            <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+                color: black;
+                text-align: center;
+                padding: 10px;
+                font-size: 16px;
+            }
+            </style>
+        """
+
+    # Add custom CSS for the footer
+    st.markdown(footer_style, unsafe_allow_html=True)
+
     st.markdown(""" 
                 **Note:** We're here to help you from 10 AM to 11 AM!
                 """, unsafe_allow_html=True)
