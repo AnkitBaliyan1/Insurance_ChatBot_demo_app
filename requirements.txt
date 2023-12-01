@@ -1,5 +1,5 @@
-streamlit
-from openai._client import OpenAI
-pandas
-streamlit_option_menu
+streamlit==1.27.2
+streamlit-chat==0.1.1
+streamlit-option-menu==0.3.6
+openai==1.3.5
 time

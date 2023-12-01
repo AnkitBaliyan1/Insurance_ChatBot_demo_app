@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import os
 from streamlit_option_menu import option_menu
 import about, data_base_model, user_file_model
 
