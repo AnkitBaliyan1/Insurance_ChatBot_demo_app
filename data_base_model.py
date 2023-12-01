@@ -18,10 +18,10 @@ def database_app():
         'Health Insurance: Are We Covered? - Sorin Investments.pdf',
         'Q&A_ insurance & reinsurance regulation in India - Lexology.pdf']
     
-    with st.container():
-        st.write("Files the model is trained for: ")
-        for i, file in enumerate(trained_files):
-            st.write(f"{i+1}. {file}")
+    
+    st.write("Files the model is trained for: ")
+    for i, file in enumerate(trained_files):
+        st.write(f"{i+1}. {file}")
 
     # these files are already given to the assistent, with following file_id
     file_ids = ['file-hDhdvqkJChYdkzttGFZ6S28b',
