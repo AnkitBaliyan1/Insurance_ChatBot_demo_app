@@ -22,7 +22,7 @@ def main():
         'Q&A_ insurance & reinsurance regulation in India - Lexology.pdf']
     
     
-    st.write("Files the model is trained for: ")
+    st.write("I hold knowledge from below sources:")
     for i, file in enumerate(trained_files):
         st.write(f"{i+1}. {file}")
 
