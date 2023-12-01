@@ -101,13 +101,16 @@ def database_app():
                 messages = client.beta.threads.messages.list(
                 thread_id=thread.id
                 )
-
+                
+                st.write("generated resposne")
                 # creating it to view the response and prompt
                 for i in reversed(messages.data):
                     st.write(i.role + " :")
                     final_answer = i.content[0].text.value
                     st.write(final_answer)
+                    st.write("saving file now")
                     if i.role == 'assistant':
+                        st.write("callling function to save file")
                         update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
                         
 
