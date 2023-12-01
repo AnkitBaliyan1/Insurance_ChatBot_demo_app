@@ -7,7 +7,8 @@ st.title("launching app")
 # Dummy user data
 users = {
     "admin": "password123",
-    "user1": "mypassword"
+    "user1": "mypassword",
+    "kunal": "passwordisweak"
 }
 
 # Define functions for each page

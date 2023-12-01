@@ -12,7 +12,6 @@ API_KEY = st.secrets['OPENAI_API']
 
 def update_log_file(user, question, answer):
     file_path = "/logbook/logbook.csv"
-    file_path = "/logbook" 
     # Read existing data or create a new DataFrame if file doesn't exist
     try:
         df = pd.read_csv(os.path.join(file_path,'logbook.csv'))
@@ -39,8 +38,7 @@ def update_log_file(user, question, answer):
         # Handle the error, e.g., log it, use an alternative path, or notify the user
         st.write("Permission denied: Unable to create directory.")
 
-    df.to_csv("logbook.csv", index=False)
-    st.write("file saved success")
+    #df.to_csv("logbook.csv", index=False)
     st.write(df)
 
 
