@@ -8,7 +8,7 @@ st.title("launching app")
 users = {
     "admin": "password123",
     "user1": "mypassword",
-    "kunal": "passwordisweak"
+    "kunal": "weEkpassword"
 }
 
 # Define functions for each page
