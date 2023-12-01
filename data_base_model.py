@@ -3,7 +3,7 @@ import streamlit as st
 from openai._client import OpenAI
 import time
 
-API_KEY = st.secrets(["OPENAI_API"])
+API_KEY = st.secrets(['OPENAI_API'])
 
 def database_app():
     client = OpenAI(api_key = API_KEY)
