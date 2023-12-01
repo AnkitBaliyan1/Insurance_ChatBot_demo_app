@@ -1,6 +1,5 @@
 streamlit
-os
-openai
+from openai._client import OpenAI
 pandas
 streamlit_option_menu
 time

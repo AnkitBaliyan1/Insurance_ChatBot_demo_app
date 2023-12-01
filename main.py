@@ -11,14 +11,6 @@ users = {
 }
 
 # Define functions for each page
-def about_page():
-    st.title('About')
-    st.write('This is the about page.')
-
-def product_page():
-    st.title('Product')
-    st.write('This is the product page.')
-
 def info_page():
     st.title('Info')
     st.write('This is the info page.')
