@@ -40,6 +40,8 @@ def update_log_file(user, question, answer):
         st.write("Permission denied: Unable to create directory.")
 
     df.to_csv("logbook.csv", index=False)
+    st.write("file saved success")
+    st.write(df)
 
 
 
@@ -122,7 +124,6 @@ def database_app():
                     final_answer = i.content[0].text.value
                     st.write(final_answer)
                     if i.role == 'assistant':
-                        st.write("callling function to save file")
                         update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
                         
 
