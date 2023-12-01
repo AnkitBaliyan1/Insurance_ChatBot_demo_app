@@ -1,2 +1,4 @@
 
 training/model_training.ipynb
+*.pdf
+training/.DS_Store
