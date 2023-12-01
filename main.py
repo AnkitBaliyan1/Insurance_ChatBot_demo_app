@@ -41,6 +41,14 @@ def contact_page():
     # Add custom CSS for the footer
     st.markdown(footer_style, unsafe_allow_html=True)
 
+    # Adding the footer
+    footer = """
+        <div class="footer">
+        <p><strong>Note:</strong> We're here to help you from 10 AM to 6 PM! If you reach out to us outside these hours, don't worry – we'll get back to you as soon as we're back.</p>
+        </div>
+    """
+    st.markdown(footer, unsafe_allow_html=True)
+
     st.markdown(""" 
                 **Note:** We're here to help you from 10 AM to 11 AM!
                 """, unsafe_allow_html=True)
