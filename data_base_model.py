@@ -108,8 +108,8 @@ def database_app():
                     final_answer = i.content[0].text.value
                     st.write(final_answer)
                     if i.role == 'assistant':
-                        #update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
-                        pass
+                        update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
+                        
 
 
 
