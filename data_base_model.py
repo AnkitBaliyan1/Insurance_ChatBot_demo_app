@@ -108,9 +108,9 @@ def database_app():
                     #st.write(i.content[0].text.value)
                     final_answer = i.content[0].text.value
                     if i.role == 'assistant':
-                          # Assuming the response is here
-
-                        update_log_file(user="current_user", question=user_prompt, answer=final_answer)
+                        st.write(final_answer)
+                        # Assuming the response is here
+                        #update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
 
 
 
