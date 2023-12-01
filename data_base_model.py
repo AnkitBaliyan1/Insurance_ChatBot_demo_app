@@ -2,9 +2,32 @@ import streamlit as st
 #import os
 from openai._client import OpenAI
 import time
+from datetime import datetime
+import pandas as pd
+
 
 
 API_KEY = st.secrets['OPENAI_API']
+
+
+def update_log_file(user, question, answer):
+    file_path = "/logbook/logbook.csv"
+    
+    # Read existing data or create a new DataFrame if file doesn't exist
+    try:
+        df = pd.read_csv(file_path)
+        st.write("file read successfully")
+    except FileNotFoundError:
+        df = pd.DataFrame(columns=['user', 'time', 'question', 'answer'])
+
+    # Add new entry
+    new_entry = {'user': user, 'time': datetime.now(), 'question': question, 'answer': answer}
+    df = df.append(new_entry, ignore_index=True)
+
+    # Save updated data
+    df.to_csv(file_path, index=False)
+
+
 
 
 def database_app():
@@ -82,6 +105,12 @@ def database_app():
                 # creating it to view the response and prompt
                 for i in reversed(messages.data):
                     st.write(i.role + " :")
-                    st.write(i.content[0].text.value)
+                    #st.write(i.content[0].text.value)
+                    final_answer = i.content[0].text.value
+                    if i.role == 'assistant':
+                          # Assuming the response is here
+
+                        update_log_file(user="current_user", question=user_prompt, answer=final_answer)
+
 
 
