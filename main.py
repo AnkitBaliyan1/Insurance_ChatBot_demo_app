@@ -49,9 +49,7 @@ def contact_page():
     """
     st.markdown(footer, unsafe_allow_html=True)
 
-    st.markdown(""" 
-                **Note:** We're here to help you from 10 AM to 11 AM!
-                """, unsafe_allow_html=True)
+    
 
 # Function to verify credentials
 def check_credentials(username, password):
