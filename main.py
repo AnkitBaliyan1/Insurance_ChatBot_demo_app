@@ -47,7 +47,7 @@ def contact_page():
         <p><strong>Note:</strong> We're here to help you from 10 AM to 6 PM! If you reach out to us outside these hours, don't worry – we'll get back to you as soon as we're back.</p>
         </div>
     """
-    st.markdown(footer, unsafe_allow_html=True)
+    #st.markdown(footer, unsafe_allow_html=True)
 
     st.markdown(""" 
                 **Note:** We're here to help you from 10 AM to 11 AM!
