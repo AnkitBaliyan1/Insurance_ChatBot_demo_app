@@ -21,8 +21,15 @@ def update_log_file(user, question, answer):
         df = pd.DataFrame(columns=['user', 'time', 'question', 'answer'])
 
     # Add new entry
-    new_entry = {'user': user, 'time': datetime.now(), 'question': question, 'answer': answer}
-    df = df.append(new_entry, ignore_index=True)
+    new_entry_df = pd.DataFrame({
+        'user': [user],
+        'time': [datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+        'question': [question],
+        'answer': [answer]
+    })
+
+    # Concatenate the new entry with the existing DataFrame
+    df = pd.concat([df, new_entry_df], ignore_index=True)
 
     # Save updated data
     df.to_csv(file_path, index=False)
@@ -102,13 +109,11 @@ def database_app():
                 thread_id=thread.id
                 )
                 
-                st.write("generated resposne")
                 # creating it to view the response and prompt
                 for i in reversed(messages.data):
                     st.write(i.role + " :")
                     final_answer = i.content[0].text.value
                     st.write(final_answer)
-                    st.write("saving file now")
                     if i.role == 'assistant':
                         st.write("callling function to save file")
                         update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
