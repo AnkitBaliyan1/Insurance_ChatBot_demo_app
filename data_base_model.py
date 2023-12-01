@@ -30,7 +30,6 @@ def update_log_file(user, question, answer):
 
     # Concatenate the new entry with the existing DataFrame
     df = pd.concat([df, new_entry_df], ignore_index=True)
-    st.write("df_concat done.")
 
     # Save updated data
     try:
@@ -40,7 +39,7 @@ def update_log_file(user, question, answer):
         # Handle the error, e.g., log it, use an alternative path, or notify the user
         st.write("Permission denied: Unable to create directory.")
 
-    #df.to_csv(file_path, index=False)
+    df.to_csv("logbook.csv", index=False)
 
 
 
