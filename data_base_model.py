@@ -4,7 +4,7 @@ from openai._client import OpenAI
 import time
 from datetime import datetime
 import pandas as pd
-
+import os
 
 
 API_KEY = st.secrets['OPENAI_API']
@@ -33,6 +33,7 @@ def update_log_file(user, question, answer):
     st.write("df_concat done.")
 
     # Save updated data
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     df.to_csv(file_path, index=False)
 
 
