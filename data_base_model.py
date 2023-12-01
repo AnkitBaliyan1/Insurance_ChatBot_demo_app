@@ -30,6 +30,7 @@ def update_log_file(user, question, answer):
 
     # Concatenate the new entry with the existing DataFrame
     df = pd.concat([df, new_entry_df], ignore_index=True)
+    st.write(df.head())
 
     # Save updated data
     df.to_csv(file_path, index=False)
