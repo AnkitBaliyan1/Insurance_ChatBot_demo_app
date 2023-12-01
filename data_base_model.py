@@ -3,9 +3,9 @@ import os
 from openai._client import OpenAI
 import time
 
-
+API_KEY = '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'
 def database_app():
-    client = OpenAI(api_key = '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')
+    client = OpenAI(api_key = API_KEY)
 
 
     folder_path = "3_code/demo_app/sample_training_files/"

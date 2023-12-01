@@ -12,3 +12,4 @@ def main():
     st.write("\t 1. Ask me anything from my databasae")
 
     st.write("\t 2. Upload your file and ask me anything out of it")
+    
