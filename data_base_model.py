@@ -38,9 +38,9 @@ def update_log_file(user, question, answer):
         df.to_csv(file_path, index=False)
     except PermissionError as e:
         # Handle the error, e.g., log it, use an alternative path, or notify the user
-        print("Permission denied: Unable to create directory.")
+        st.write("Permission denied: Unable to create directory.")
 
-    df.to_csv(file_path, index=False)
+    #df.to_csv(file_path, index=False)
 
 
 
