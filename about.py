@@ -9,7 +9,11 @@ def main():
 
     st.write("Our products:")
 
-    st.write("\t 1. Ask me anything from my databasae")
+    st.subheader("1. InsureBuddy")
 
-    st.write("\t 2. Upload your file and ask me anything out of it")
+    st.write("Ask me anything from my databasae")
+
+    st.subheader("2. DocQueryWizard")
+
+    st.write("Upload your file and ask me anything out of it")
     

@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import about, user_file_model, data_base_model
 
-st.title("launching app")
+st.title("ClaimComrade Web App")
 
 # Dummy user data
 users = {
