@@ -3,7 +3,8 @@ import os
 from openai._client import OpenAI
 import time
 
-API_KEY = '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'
+API_KEY = st.secrets(["OPENAI_API"])
+
 def database_app():
     client = OpenAI(api_key = API_KEY)
 
