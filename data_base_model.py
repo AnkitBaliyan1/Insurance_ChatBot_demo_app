@@ -105,12 +105,11 @@ def database_app():
                 # creating it to view the response and prompt
                 for i in reversed(messages.data):
                     st.write(i.role + " :")
-                    #st.write(i.content[0].text.value)
                     final_answer = i.content[0].text.value
+                    st.write(final_answer)
                     if i.role == 'assistant':
-                        st.write(final_answer)
-                        # Assuming the response is here
                         #update_log_file(user=st.session_state['username'], question=user_prompt, answer=final_answer)
+                        pass
 
 
 
