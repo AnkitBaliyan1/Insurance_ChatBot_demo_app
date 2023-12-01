@@ -29,4 +29,5 @@ def main():
     st.subheader("2. DocQueryWizard")
 
     st.write("Upload your file and ask me anything out of it")
+    st.write("Be patient, we're almost there! \n Our new product is like a fine wine; it needs just a little more time to be perfect. \n Cheers to great things ahead!")
     
