@@ -3,6 +3,7 @@ import streamlit as st
 from openai._client import OpenAI
 import time
 import pandas as pd
+import os
 
 API_KEY = st.secrets['OPENAI_API']
 
@@ -14,3 +15,4 @@ current_log_book = pd.DataFrame(columns=['user','time','question','answer'])
 
 def database_app():
     st.write(current_log_book)
+    st.write(os.getcwd())
