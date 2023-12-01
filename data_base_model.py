@@ -12,10 +12,10 @@ API_KEY = st.secrets['OPENAI_API']
 
 def update_log_file(user, question, answer):
     file_path = "/logbook/logbook.csv"
-    
+    file_path = "/logbook" 
     # Read existing data or create a new DataFrame if file doesn't exist
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(os.path.join(file_path,'logbook.csv'))
         st.write("file read successfully")
     except FileNotFoundError:
         df = pd.DataFrame(columns=['user', 'time', 'question', 'answer'])
@@ -33,7 +33,13 @@ def update_log_file(user, question, answer):
     st.write("df_concat done.")
 
     # Save updated data
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    try:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        df.to_csv(file_path, index=False)
+    except PermissionError as e:
+        # Handle the error, e.g., log it, use an alternative path, or notify the user
+        print("Permission denied: Unable to create directory.")
+
     df.to_csv(file_path, index=False)
 
 
