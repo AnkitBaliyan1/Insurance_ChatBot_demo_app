@@ -8,7 +8,9 @@ st.title("ClaimComrade Web App")
 users = {
     "admin": "password123",
     "user1": "mypassword",
-    "kunal": "weEkpassword"
+    "kunal": "weEkpassword",
+    "bhanu121": "weEkpassword",
+    "ambuj69": "weEkPassword"
 }
 
 # Define functions for each page
@@ -42,7 +44,7 @@ def contact_page():
     # Adding the footer
     footer = """
         <div class="footer">
-        <p><strong>Note:</strong> We're here to help you from 10 AM to 6 PM!</p>
+        <p><strong>Note:</strong> We don't have timings decided yet.!</p>
         </div>
     """
     st.markdown(footer, unsafe_allow_html=True)
