@@ -48,9 +48,6 @@ def main_app():
     if st.sidebar.button('Logout'):
         logout()
 
-    #st.markdown(f"<h2 style='text-align: right; color: gray;'>{st.session_state['username']}</h2>", unsafe_allow_html=True)
-
-
     st.markdown(f"""
         <div style='text-align: right;'>
             <span style='font-size: 16px; margin-right: 10px;'>{st.session_state['username']}</span>
