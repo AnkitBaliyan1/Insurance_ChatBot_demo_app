@@ -66,7 +66,8 @@ def main_app():
     if selected == 'About':
         about.main()
     elif selected == 'ChatBot':
-        data_base_model.database_app()
+        st.write("database app now")
+        #data_base_model.database_app()
     elif selected == "Build your onw ChatBot":
         user_file_model.main()
     elif selected == 'Info':
