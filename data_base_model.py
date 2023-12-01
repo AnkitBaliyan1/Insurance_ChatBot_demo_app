@@ -10,5 +10,7 @@ current_log_book = pd.DataFrame(columns=['user','time','question','answer'])
 #log_book_path = "git_Insurance_ChatBot_demo_app/logbook/logbook.csv"
 
 #log_database = pd.read_csv(log_book_path)
-st.write(current_log_book)
 
+
+def database_app():
+    st.write(current_log_book)
