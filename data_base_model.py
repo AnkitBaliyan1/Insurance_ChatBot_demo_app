@@ -8,12 +8,14 @@ API_KEY = st.secrets(["OPENAI_API"])
 def database_app():
     client = OpenAI(api_key = API_KEY)
 
-
-    folder_path = "3_code/demo_app/sample_training_files/"
-    trained_files = []
-    for doc in os.listdir(folder_path):
-        trained_files.append(doc)
-        
+    trained_files = ['9.3 INSURANCE LAW AND PRACTICE_CS.pdf',
+        'Guidebook on Health Insurance.pdf',
+        'Insurance_Basics information ebook.pdf',
+        'Principles of Insurance_LOMA.pdf',
+        'ic 14 regulation of ins business for Licentiate Exam of III.pdf',
+        'Health Insurance: Are We Covered? - Sorin Investments.pdf',
+        'Q&A_ insurance & reinsurance regulation in India - Lexology.pdf']
+    
     st.write("Files the model is trained for: ")
     for i, file in enumerate(trained_files):
         st.write(f"{i+1}. {file}")
