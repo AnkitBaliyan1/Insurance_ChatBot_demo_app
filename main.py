@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import about, data_base_model, user_file_model
+import about, user_file_model
 
 st.title("launching app")
 
