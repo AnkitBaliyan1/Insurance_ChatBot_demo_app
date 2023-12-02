@@ -7,7 +7,6 @@ st.title("ClaimComrade Web App")
 u_pass = st.secrets['user_pass']
 
 
-# Dummy user data
 users = {
     "admin": "password123",
     "user1": "mypassword",
