@@ -4,6 +4,9 @@ import about, user_file_model, data_base_model
 
 st.title("ClaimComrade Web App")
 
+u_pass = st.secrets['user_pass']
+st.write(u_pass)
+
 # Dummy user data
 users = {
     "admin": "password123",
