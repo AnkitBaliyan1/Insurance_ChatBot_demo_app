@@ -4,9 +4,6 @@ import about, user_file_model, data_base_model
 
 st.title("ClaimComrade Web App")
 
-u_pass = st.secrets['user_pass']
-
-
 users = {
     "admin": "password123",
     "user1": "mypassword",
