@@ -66,7 +66,7 @@ Before using the application, please ensure you have the following prerequisites
 
 ## Contact
 
-For inquiries, suggestions, or assistance, please don't hesitate to reach out to us. Feel free to email us at [your@email.com](mailto:your@email.com) with any questions or feedback.
+For inquiries, suggestions, or assistance, please don't hesitate to reach out to us. Feel free to email us at [a.baliyan008@gmail.com](mailto:a.baliyan008@gmail.com) with any questions or feedback.
 
 ## License
 
