@@ -9,19 +9,31 @@ folder "training":
         assistant id from this is passed on to generate the model response
 
 
+main.py
+    main file that user interact with
+    login-logout and basic interface is decided here
+
+
 about.py
     this is the file used in app development to give about reference
+
 
 data_base_model.py
     file that will generate resposne using the database. 
     using assistant id, file ids and api key to generate the resposne
 
-main.py
 
 reference.txt
+    file to store explanation and content of each file
+
 
 requirements.txt
+    system and environment requiremts to run the model
+
 
 temp.py
+    temperory files
+
 
 user_file_model.py
+    file that will take user file to generate the file id, assistant id and generate resposne from this file.

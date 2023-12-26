@@ -36,7 +36,8 @@ def update_log_file(user, question, answer):
         df.to_csv(file_path, index=False)
     except PermissionError as e:
         # Handle the error, e.g., log it, use an alternative path, or notify the user
-        st.write("Permission denied: Unable to create directory.")
+        #st.write("Permission denied: Unable to create directory.")
+        pass
 
     #df.to_csv("logbook.csv", index=False)
     st.write(df)
@@ -48,15 +49,15 @@ def database_app():
     client = OpenAI(api_key = API_KEY)
 
     # these files are already given to the assistent, with following file_id
-    file_ids = ['file-hDhdvqkJChYdkzttGFZ6S28b',
-    'file-7D9IReBqreOlI2nmAa89KXvy',
-    'file-NgBpE07Ve7WcdOJoVHNvI0rl',
-    'file-NYABDUzSMSrgBDyd8TYoCspj',
-    'file-rurOHDUhqHTq8LvL3geWlUKb',
-    'file-q4jVdVJfLvuYhIwnS5tS9mzE',
-    'file-KMYHVuEHwdd2NxiUsI6sUVlN']
+    file_ids = ['file-GE91jMYXkQ2QiVVrcwz6G7wh',
+        'file-cJsfuNfu18AOP9dN3asYrxfS',
+        'file-Gm44wTSYk5mHRmhwuH4t6pgb',
+        'file-OKGamfHqaNEzivBw0absVaBR',
+        'file-sx4ChdDMpItOEgKBsGC9AEkL',
+        'file-ZwFicx7NU8AUGNBgNCUomxQj',
+        'file-ufqJN5sFWNVj2nAmpWtXNkXf']
 
-    assistant_id = 'asst_LMC3TpkbxsFtbVPcPH3UGoec'
+    assistant_id = 'asst_gja1V67PclQreusUebPq7Sq1'
 
     # creating thread 
     thread = client.beta.threads.create()
