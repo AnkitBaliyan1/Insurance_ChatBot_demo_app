@@ -1,0 +1,27 @@
+
+################################### 
+
+This file is to help understand the project file disctibution and content 
+
+folder "training": 
+    sample_training_files: contains files that will be used for training
+    model_training.ipynb: contains the file that is used to train model, pass the database files to assistant and generate assistant id.
+        assistant id from this is passed on to generate the model response
+
+
+about.py
+    this is the file used in app development to give about reference
+
+data_base_model.py
+    file that will generate resposne using the database. 
+    using assistant id, file ids and api key to generate the resposne
+
+main.py
+
+reference.txt
+
+requirements.txt
+
+temp.py
+
+user_file_model.py
