@@ -40,7 +40,7 @@ def update_log_file(user, question, answer):
         pass
 
     #df.to_csv("logbook.csv", index=False)
-    st.write(df)
+    #st.write(df)
 
 
 
